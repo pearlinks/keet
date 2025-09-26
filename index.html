@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Keet Link</title>
+    <script>
+        window.onload = function() {
+            const path = window.location.pathname.split('/keet/pear://keet/')[1];
+            if (path) {
+                window.location.href = `pear://keet/${path}`;
+            } else {
+                // Если адреса нет — показываем инструкцию
+                document.body.innerHTML = `
+                    <p>Error: Channel address not specified.</p>
+                    <p>Example of a correct link: <code>https://pearlinks.github.io/keet/pear://keet/yfo471fpr5kqyiay8fnb4eu5ccngrrmjax1xah7gbwphka1soh3nnboxbsd8pmhsq91t7s5aeea58uxxc86naj5jbe7f1rddmishyoest6crmrxs3om3tb7i6naj4nqgo1mgqnttzgz3xxh4uhg1awx9q6zz1ye</code></p>
+                `;
+            }
+        };
+    </script>
+</head>
+<body>
+    <p>Redirecting to Keet...</p>
+</body>
+</html>
