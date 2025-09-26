@@ -4,7 +4,7 @@
     <title>Keet Link</title>
     <script>
         window.onload = function() {
-            const path = window.location.pathname.split('/keet/pear://keet/')[1];
+            const path = window.location.pathname.split('/keet/')[1];
             console.log('path: ', path)
             if (path) {
                 window.location.href = `pear://keet/${path}`;
